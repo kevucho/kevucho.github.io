@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Tienda de Pantalones</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            background-color: #2196f3;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contenedor {
+            width: 1100px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tarjeta-contenedor {
+            margin: 20px;
+            perspective: 800;
+        }
+
+        .tarjeta {
+            width: 300px;
+            height: 400px;
+            background: #f28730;
+            border-radius: 8px;
+            color: white;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease;
+            box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+        }
+
+        .tarjeta:hover {
+            transform: rotateY(180deg);
+        }
+
+        .tarjeta .frente, .tarjeta .detrás {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .tarjeta .frente {
+            background: #f28730;
+        }
+
+        .tarjeta .frente p {
+            margin: 5px 0;
+        }
+
+        .tarjeta .detrás {
+            background: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        .tarjeta .detrás img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galería</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="mision-vision.html">Misión y Visión</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+ 
+    <section>
+        <h2>Nuestros Productos</h2>
+        <button onclick="document.getElementById('audio-galeria').play()">Reproducir música</button>
+        <div class="contenedor">
+            <audio id="audio-galeria" src="fb.mp3" preload="auto"></audio>
+
+          
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Pantalones Cargo de Lona</h3>
+                        <p>Colores: Oliva, caqui, negro, azul marino, beige</p>
+                        <p>Descripción: Ideales para un look casual y versátil. Sus múltiples bolsillos los hacen funcionales y modernos.</p>
+                        <p>Precio: Q500</p>
+                    </div>
+                    <div class="detrás">
+                        <img src="car.jpg" >
+                       
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Chinos de Lona</h3>
+                        <p>Colores: Beige, gris, azul marino, burdeos</p>
+                        <p>Descripción: Perfectos para un estilo más elegante y casual.</p>
+                        <p>Precio: Q350</p>
+                    </div>
+                    <div class="detrás">
+                        <img src="ch.jpg" >
+                        
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Pantalones de Lona Anchos</h3>
+                        <p>Colores: Negro, blanco, denim, verde militar.</p>
+                        <p>Descripción: Ideales para un look relajado y cómodo.</p>
+                        <p>Precio: Q500</p>
+                    </div>
+                    <div class="detrás">
+                        <img src="la.jpg" >
+                       
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Bermudas de Lona</h3>
+                        <p>Colores: Azul marino, beige, gris, estampado camuflaje</p>
+                        <p>Descripción: Perfectos para los días cálidos.</p>
+                        <p>Precio: Q300 </p>
+                    </div>
+                    <div class="detrás">
+                        <img src="bl.jpg" >
+                       
+                    </div>
+                </div>
+            </div>
+
+           >
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Pantalones de Gabardina de Tiro Alto</h3>
+                        <p>Colores: Negro, blanco, beige, mostaza.</p>
+                        <p>Estilizan la figura y son perfectos para looks más sofisticados.</p>
+                        <p>Precio: Q700</p>
+                    </div>
+                    <div class="detrás">
+                        <img src="ta.jpg" >
+                     
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta">
+                    <div class="frente">
+                        <h3>Pantalones de Gabardina con Pinzas</h3>
+                        <p>Colores: Negro, gris, azul marino, marrón.</p>
+                        <p>Descripción: Ofrecen un aspecto más formal y elegante.</p>
+                        <p>Precio: Q900</p>
+                    </div>
+                    <div class="detrás">
+                        <img src="pz.jpg">
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Pantalones. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

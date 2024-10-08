@@ -1,0 +1,8 @@
+.detrás {
+    background: #ff5722;
+    transform: rotateY(180deg); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
